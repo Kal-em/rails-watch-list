@@ -1,3 +1,5 @@
+// @import "colors";
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -9,4 +11,31 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background;
+  font-size: 24px;
+  padding: 20px 40px;
+  border-bottom: solid $primary 2px;
+  position: sticky;
+  top: 0;
+
+  a {
+    text-decoration: none;
+    color: $text;
+    };
+
+    div {
+      display: flex;
+      font-size: 12px;
+      background-color: #d30000a6;
+      margin-top: 0px;
+      padding: 10px;
+      border-radius: 5px;
+    }
 }

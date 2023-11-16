@@ -1,7 +1,14 @@
-<ul>
-<% @lists.each do |list| %>
-<li><%=link_to list.name, list_path(list) %></li>
-<% end %>
-</ul>
+<div class="body">
+  <h2>My list</h2>
+  <div class="container">
+    <% @lists.each do |list| %>
+      <a href="<%= list_path(list)  %>">
+        <div class='card-home :hover'>
+          <h3><%=list.name%></h3>
+        </div>
+      </a>
+    <% end %>
+  </div>
+  <div class="button-create"><%= link_to "New list", new_list_path%></div>
 
-<%= link_to "Create a new list", new_list_path%>
+</div>

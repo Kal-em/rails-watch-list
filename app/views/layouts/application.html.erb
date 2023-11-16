@@ -11,6 +11,15 @@
   </head>
 
   <body>
+
+    <nav class="nav">
+      <span>
+        <i class="fa-solid fa-ticket" style="color: #dcf4dc;"></i>
+        <%= link_to "Pop the Corn", root_path %>
+      </span>
+      <div><%= link_to "Create a new list", new_list_path%></div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

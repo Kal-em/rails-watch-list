@@ -1,9 +1,22 @@
-<h1>list all of the movies</h1>
+<div class='body'>
+<h1 class='spacing'><%= @list.name %></h1>
+      <div class="container">
+        <% @list.movies.each do |movie| %>
+        <div class="card-container">
+            <p><%= movie.title %></p>
+          <div class="card" style="background-image: url('<%= movie.poster_url %>');">
+          <div class="content">
+            <p class="heading"><%= movie.title %></p>
+            <p><%= movie.overview %></p>
+            <p>Rating: <%= movie.rating %>/10</p>
+          </div>
+        </div>
+        </div>
+        <% end %>
+      </div>
 
-<ul class="list-group">
-  <% @list.movies.each do |movie| %>
-    <li class="list-group-item"> <%= movie.title %></li>
-  <% end %>
-</ul>
-
-<%= link_to 'add a new movie to the list', new_list_bookmark_path(@list) %>
+<button class="button-add-movie">
+<i class="fa-solid fa-film" style="color: #ffffff;"></i>
+<%= link_to 'Add a movie', new_list_bookmark_path(@list) %>
+</button>
+</div>

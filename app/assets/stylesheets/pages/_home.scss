@@ -1,1 +1,54 @@
+.body {
+  background-color: $background;
+  height: 100vh;
+  color: $text;
+  padding: 20px 70px;
+    a {
+    text-decoration: none;
+    color: $text;
+    }
+
+    li {
+      list-style: none;
+    }
+}
+
+.spacing {
+  padding: 30px 0px;
+}
 // Specific CSS for your home-page
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px;
+}
+
+.card-home {
+  display: flex;
+  background-color: $primary;
+  margin: 20px;
+  padding: 0px;
+  box-shadow: rgba(0, 0, 0, 0.358) 10px 10px 10px;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+
+  &:hover {
+  background-color: $accent;
+  }
+
+}
+
+.button-create {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #d30000a6;
+  color: $text;
+  width: 120px;
+  border-radius: 5px;
+}
