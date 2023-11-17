@@ -2,8 +2,10 @@
 <h1 class='spacing'><%= @list.name %></h1>
       <div class="container">
         <% @list.movies.each do |movie| %>
+         <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
         <div class="card-container">
             <p><%= movie.title %></p>
+            <p><%= link_to 'delete', bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list?"} %></p>
           <div class="card" style="background-image: url('<%= movie.poster_url %>');">
           <div class="content">
             <p class="heading"><%= movie.title %></p>
