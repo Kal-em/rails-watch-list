@@ -11,6 +11,9 @@ gem "font-awesome-sass", "~> 6.1"
 gem "simple_form"
 gem "sassc-rails"
 
+gem "dotenv-rails"
+
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
