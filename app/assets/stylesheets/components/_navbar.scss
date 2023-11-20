@@ -15,15 +15,17 @@
 
 .nav {
   display: flex;
+  position: sticky;
+  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: $background;
+  background-color: #1e2b1e;
   font-size: 24px;
   padding: 20px 40px;
   border-bottom: solid $primary 2px;
-  position: sticky;
   top: 0;
+  z-index: 1;
 
   a {
     text-decoration: none;
